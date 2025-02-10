@@ -4,12 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Unit Converter</title>
+    
+    <!-- Linking external stylesheet -->
     <link rel="stylesheet" href="styles.css">
+    
+    <!-- Linking JavaScript file -->
     <script defer src="script.js"></script>
 </head>
 <body>
+
     <div class="container">
         <h2>Unit Converter</h2>
+
+        <!-- Dropdown to select unit category -->
         <select id="category" onchange="populateUnits()">
             <option value="length">Length</option>
             <option value="weight">Weight</option>
@@ -17,12 +24,21 @@
             <option value="speed">Speed</option>
             <option value="volume">Volume</option>
         </select>
+
+        <!-- Input field for user to enter value -->
         <input type="number" id="inputValue" placeholder="Enter value" />
+
+        <!-- Dropdowns for unit selection -->
         <select id="fromUnit"></select>
         <span>to</span>
         <select id="toUnit"></select>
+
+        <!-- Button to trigger conversion -->
         <button onclick="convert()">Convert</button>
+
+        <!-- Display result -->
         <h3 id="result"></h3>
     </div>
+
 </body>
 </html>
